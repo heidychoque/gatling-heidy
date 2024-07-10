@@ -1,0 +1,18 @@
+name: Execution Performance
+
+on:
+  workflow-dispatch:
+    inputs:
+      testSuite:
+        type: String
+        description: 'testSuite'
+        required: true
+        default: 'pokemonapi.PokemonApiTest'
+
+jobs:
+  execpokemonapi:
+    runs-on: ubuntu-latest
+    name: Execution Performance Pokemon API
+    steps:
+      name: Checkout code
+      users: actions/checkout@v3
