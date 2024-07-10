@@ -1,0 +1,10 @@
+name: Execution Performance
+
+on:
+  workflow-dispatch:
+    inputs:
+      testSuite:
+        type: String
+        description: 'testSuite'
+        required: true
+        default: 'pokemonapi.PokemonApiTest'
