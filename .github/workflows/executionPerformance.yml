@@ -4,7 +4,7 @@ on:
   workflow-dispatch:
     inputs:
       testSuite:
-        type: String
+        type: string
         description: 'testSuite'
         required: true
         default: 'pokemonapi.PokemonApiTest'
