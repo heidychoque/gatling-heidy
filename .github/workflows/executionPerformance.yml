@@ -6,11 +6,11 @@ on:
         type: string
         description: 'testSuite'
         required: true
-        default: 'pokemonapi.PokemonApiTest'
+        default: 'restfulapi.RestfulApiTest'
 jobs:
   execpokemonapi:
     runs-on: ubuntu-latest
-    name: Execution Performance Pokemon API
+    name: Execution Performance Restful API
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,4 +19,4 @@ jobs:
         uses: gradle/gradle-build-action@v3
 
       - name: Execute test
-        run: gradle gatlingRun --simulation=pokemonapi.PokemonApiTest
+        run: gradle gatlingRun --simulation=restfulapi.RestfulApiTest

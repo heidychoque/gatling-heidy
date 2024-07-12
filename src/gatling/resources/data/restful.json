@@ -1,0 +1,92 @@
+[
+  {
+    "name": "hclApple MacBook Pro 1",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 2",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 3",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 4",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 5",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 6",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 7",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 8",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 9",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  },
+  {
+    "name": "hclApple MacBook Pro 10",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  }
+]
