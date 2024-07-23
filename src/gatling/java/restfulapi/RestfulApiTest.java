@@ -17,6 +17,7 @@ import static io.gatling.javaapi.http.HttpDsl.status;
 
 public class RestfulApiTest extends Simulation {
     String baseUrl = System.getProperty("baseUrl", "https://api.restful-api.dev/objects");
+    String concurrentUsers = System.getProperty("concurrentUsers", "5");
 
     // Define the data
     FeederBuilder.FileBased<Object> feeder = jsonFile("data/restful.json").circular();
@@ -111,7 +112,7 @@ public class RestfulApiTest extends Simulation {
     {
         setUp(
                 scn.injectClosed(
-                        constantConcurrentUsers(10).during(Duration.ofSeconds(5))
+                        constantConcurrentUsers(Integer.parseInt(concurrentUsers)).during(Duration.ofSeconds(5))
                 )
         ).protocols(httpProtocol);
     }

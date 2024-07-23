@@ -7,6 +7,11 @@ on:
         description: 'testSuite'
         required: true
         default: 'restfulapi.RestfulApiTest'
+      concurrent:
+          type: string
+          description: 'Quantity of users'
+          required: true
+          default: '10'
 jobs:
   execpokemonapi:
     runs-on: ubuntu-latest
@@ -19,4 +24,30 @@ jobs:
         uses: gradle/gradle-build-action@v3
 
       - name: Execute test
-        run: gradle gatlingRun --simulation=restfulapi.RestfulApiTest
+        run: gradle gatlingRun --simulation=${{ inputs.testSuite }} -DconcurrentUsers=${{ inputs.concurrent }}
+
+      - name: Save report
+        if: ${{always()}}
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: gatling report
+          path: ./build/reports/gatling
+
+      - name: "Publish test results"
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        if: ${{ always() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: './build/reports/gatling'
+          keep_files: true
+          user_name: heidychoque
+          user_email: kete_heidy@hotmail.com
+          publish_branch: gh_page
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./build/reports/gatling
